@@ -198,7 +198,7 @@ Fix the bugs in the registerHandlers function. An alert should display anchor's 
 
 For example, in the document below, the alert should display "2" when Google anchor is clicked since it is the third anchor element in the document and its zero-based index is 2.
 
-```
+```sh
 <body>
   In my life, I used the following web search engines:<br/>
   <a href="//www.yahoo.com">Yahoo!</a><br/>

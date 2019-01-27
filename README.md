@@ -42,3 +42,46 @@ function removeProperty(obj, prop) {
   return (Object.keys(obj).indexOf(prop) > -1) ? delete obj[prop] : false;
 }
 ```
+
+### Question 3: Check Digit
+
+Your company assigns each customer a membership ID, and you are implementing a check digit for those IDs.
+
+The check digit should be calculated by adding up all digits in each membership ID. If the result of the sum is a number with more than a single digit, another iteration is required, and the digits of the result also should be added together. This process should repeat until a single-digit number is calculated.
+
+For example, for the membership ID "55555" the sum of all digits is 25. Because this is not a single-digit number, 2 and 5 would be added, and the result, 7, would be the check digit.
+
+Starting code:
+
+```sh
+/**
+ * @prop {string} membershipId: The customer's membership ID.
+ * @return {number} The check digit.
+ */
+function createCheckDigit(membershipId) {
+  // Write the code that goes here.
+  return 0;
+}
+
+console.log(createCheckDigit("55555"));
+```
+
+Solution:
+
+```sh
+/**
+ * @prop {string} membershipId: The customer's membership ID.
+ * @return {number} The check digit.
+ */
+function createCheckDigit(membershipId) {
+  let sumMembershipId = aggregator(membershipId);
+  while (parseInt(sumMembershipId) > 9) sumMembershipId = aggregator(sumMembershipId);
+  return sumMembershipId;
+}
+
+function aggregator(strMembershipId) {
+  return strMembershipId.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+}
+
+console.log(createCheckDigit("55555"));
+```

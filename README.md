@@ -12,7 +12,7 @@ function ensure(value) {
 }
 ```
 
-### Solution 1: Ensure
+Solution:
 
 ```sh
 function ensure(value) {
@@ -35,7 +35,7 @@ function removeProperty(obj, prop) {
 }
 ```
 
-### Solution 2
+Solution:
 
 ```sh
 function removeProperty(obj, prop) {

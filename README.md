@@ -1,4 +1,4 @@
-# JavaScript Interview Wuestions & Answers
+# JavaScript Interview Questions & Answers
 
 ### Question 1: Ensure
 

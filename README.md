@@ -106,8 +106,8 @@ Solution:
 
 ```sh
 function formatDate(userDate) {
-  const x = userDate.split('/');
-  return `${x[2]}${x[1]}${x[0]}`;
+  let arr = userDate.split('/').map(a => (a.length < 2)? '0' + a : a);
+  return `${arr[2]}${arr[0]}${arr[1]}`;
 }
 
 console.log(formatDate("12/31/2014"));
